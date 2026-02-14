@@ -28,15 +28,14 @@ The objective is controlled natural-language interaction with a formally modeled
 
 ---
 
-## Core Principle
+## Core Design Principle
 
-> Structured domain modeling precedes language modeling.
+Structured domain modeling precedes language modeling.
 
-- Harmonic logic is deterministic.
-- Retrieval is structural and schema-aware.
-- Implemented strict prompt-guardrails to prevent hallucinated harmonic reasoning.
-
-The system enforces strict separation between symbolic computation and probabilistic language generation.
+- Harmonic logic remains fully deterministic.
+- Retrieval operates over structured, schema-aware objects.
+- Strict prompt guardrails are implemented to prevent hallucinated harmonic reasoning.
+- The system enforces explicit separation between symbolic computation and probabilistic language generation.
 
 ---
 
