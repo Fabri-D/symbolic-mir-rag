@@ -34,7 +34,7 @@ The objective is controlled natural-language interaction with a formally modeled
 
 - Harmonic logic is deterministic.
 - Retrieval is structural and schema-aware.
-- The LLM is constrained to interpretation.
+- Implemented strict prompt-guardrails to prevent hallucinated harmonic reasoning.
 
 The system enforces strict separation between symbolic computation and probabilistic language generation.
 
@@ -201,6 +201,21 @@ The system includes:
 All layers are modular.
 
 Embedding generation, indexing, retrieval, and verbalization are independently replaceable.
+
+---
+
+## Engineering Highlights
+
+- ~5GB FAISS index built from structured symbolic dataset
+- SentenceTransformers (MiniLM) embedding pipeline
+- Hybrid ranking (vector similarity + domain-specific structural filtering)
+- SQLite metadata alignment layer
+- Query normalization and multi-language handling
+- Explicit pair detection in user queries
+- Prompt constraint enforcement (allowed tokens filtering)
+- Local LLM orchestration (Mistral 7B via Ollama)
+- Deterministic separation between symbolic logic and LLM layer
+- FastAPI backend with modular retrieval pipeline
 
 ---
 
